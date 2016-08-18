@@ -2,6 +2,7 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.loadNpmTasks('grunt-php');
+	grunt.loadNpmTasks('grunt-shell');
 
     grunt.initConfig({
         php: {
@@ -13,8 +14,14 @@ module.exports = function (grunt) {
                     router: "index.php"
                 }
             }
+        },
+		shell: {
+            generate_static: {
+                command: 'php generate'
+            }
         }
     });
 
     grunt.registerTask('default', ['php']);
+    grunt.registerTask('static', ['shell:generate_static']);
 };
