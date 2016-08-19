@@ -219,6 +219,13 @@ _.M.WAITER.remove('waiter_key_0', ['waiter_key_2', 'waiter_key_6']);
             </dl>
         </li>
         <li class="list-group-item">
+            <h4>Throws</h4>
+            <dl class="dl-horizontal">
+                <dt>Waiter key is non-exists...</dt>
+                <dd>Khi waiter key không tồn tại hoặc đã hết số lần thực thi</dd>
+            </dl>
+        </li>
+        <li class="list-group-item">
             <h4>Examples</h4>
 <pre><code class="javascript">var key = _.M.WAITER.add(function(name){
     console.log('Hi,', name);

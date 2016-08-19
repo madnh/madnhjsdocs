@@ -33,7 +33,7 @@
                     <td><code>live_time</code></td>
                     <td>number</td>
                     <td><code>_.M.CACHE_MEDIUM</code></td>
-                    <td>Thời gian tồn tại của cache, tính từ thời điểm khởi tạo</td>
+                    <td>Thời gian tồn tại của cache, tính từ thời điểm khởi tạo. Đơn vị là giây</td>
                 </tr>
                 </tbody>
             </table>
@@ -352,12 +352,16 @@ _.M.CACHE.increment('non_exists', 2); //2</code></pre>
 <div class="panel panel-info">
     <div class="panel-heading"><strong>arrayPush</strong></div>
     <div class="panel-body">
-        Tương tự như <code>_.M.CACHE.increment</code> nhưng dành cho mảng - thêm giá trị vào mảng
+        Tương tự như <code>_.M.CACHE.increment</code> nhưng dành cho mảng - thêm giá trị vào mảng và parameter 
+        <code>value</code> là bắt buộc
     </div>
 </div>
 <div class="panel panel-info">
     <div class="panel-heading"><strong>arrayWithout</strong></div>
     <div class="panel-body">
-        Tương tự như <code>_.M.CACHE.arrayPush</code> nhưng xóa giá trị khỏi mảng
+        <p>Tương tự như <code>_.M.CACHE.arrayPush</code> nhưng xóa giá trị khỏi mảng parameter vả prameter <code>value</code> là bắt buộc.</p>
+        <div class="alert alert-danger">
+            <strong>Chú ý!</strong> Nếu cache không tồn tại sẽ trả về <code>undefined</code>
+        </div>
     </div>
 </div>

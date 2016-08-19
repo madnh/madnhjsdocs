@@ -3,7 +3,7 @@ Object cung cấp các method, thuộc tính mang tính toàn cục.
 - Các event toàn cục
 - Khởi chạy các hàm với sự kiện init của App
 
-`_.App` là instance của class `_.M.EventEmitter`, mặc định được khởi tạo khi load `_.M`
+`_.App` là instance của private class `App`, được extend từ class `_.M.EventEmitter`, mặc định được khởi tạo khi load module `_.App`
 
 ## Chứa các biến toàn cục
 Bản chất của `_.App` chỉ là một object, chúng ta có thể dùng để lưu trữ các biến, method dùng chung.

@@ -37,11 +37,11 @@ Trả về ID tiếp theo của một danh mục
 
 ### Ví dụ
 ```js
-_.M.nextID(); //unique_id_0
 _.M.nextID(); //unique_id_1
-_.M.nextID(null, false); //2
-_.M.nextID('superman'); //superman_0
+_.M.nextID(); //unique_id_2
+_.M.nextID(null, false); //3
 _.M.nextID('superman'); //superman_1
-_.M.nextID(); //unique_id_3
-_.M.nextID('superman', false); //2
+_.M.nextID('superman'); //superman_2
+_.M.nextID(); //unique_id_4
+_.M.nextID('superman', false); //3
 ```

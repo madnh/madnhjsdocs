@@ -253,3 +253,16 @@
         </li>
     </ul>
 </div>
+
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>reset</strong></div>
+    <div class="panel-body">
+        Đặt lại tình trạng của FLAG
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h3>Parameters</h3>
+            Không có parameter
+        </li>
+    </ul>
+</div>

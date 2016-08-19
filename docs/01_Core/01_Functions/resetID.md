@@ -1,7 +1,7 @@
-title: _.M.currentID
+title: _.M.resetID
 -----
 
-ID hiện tại của 1 danh mục
+Đặt lại ID của danh mục
 
 ### Tham số
 <table class="table table-striped">
@@ -21,30 +21,25 @@ ID hiện tại của 1 danh mục
         <td>Danh mục</td>
     </tr>
     <tr>
-        <td><code>type_as_prefix</code></td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>Dùng danh mục như là tiền tố của ID trả về</td>
+        <td><code>value</code></td>
+        <td>number</td>
+        <td>undefined</td>
+        <td>Giá trị ID của danh mục, nếu để trống sẽ xóa danh mục</td>
     </tr>
     </tbody>
 </table>
 
 ### Kết quả trả về
 <dl class="dl-horizontal">
-    <dt>false</dt><dd>Danh mục chưa khởi tạo</dd>
+    <dt>undefined</dt><dd>Danh mục đã được xóa</dd>
     <dt>number</dt><dd>ID hiện tại</dd>
-    <dt>string</dt><dd>ID hiện tại và tiền tố</dd>
 </dl>
 
 ### Ví dụ
 ```js
-_.M.currentID(); //false
 _.M.nextID(); //unique_id_1
 _.M.nextID(); //unique_id_2
-_.M.currentID(); //unique_id_2
-_.M.currentID(null, false); //2
-_.M.nextID('superman'); //superman_1
-_.M.nextID('superman'); //superman_2
-_.M.currentID('superman'); //superman_2
-_.M.currentID('superman', false); //2
+_.M.resetID();
+_.M.currentID(); //false
+_.M.nextID(); //unique_id_1
 ```
