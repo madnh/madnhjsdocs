@@ -250,12 +250,6 @@
                                     <dd>meta info</dd>
                                 </dl>
         </li>
-        <li class="list-group-item">
-            <h4>Throws</h4>
-            <ul>
-                <li>Kiểu dữ liệu không tồn tại</li>
-            </ul>
-        </li>
     </ul>
 </div>
 <div class="panel panel-info">
@@ -332,12 +326,6 @@
                 </dd>
             </dl>
         </li>
-        <li class="list-group-item">
-            <h4>Throws</h4>
-            <ul>
-                <li>Kiểu dữ liệu không tồn tại</li>
-            </ul>
-        </li>
     </ul>
 </div>
 <div class="panel panel-info">
@@ -383,7 +371,7 @@
     </ul>
 </div>
 <div class="panel panel-info">
-    <div class="panel-heading"><strong>hasKey</strong></div>
+    <div class="panel-heading"><strong>has</strong></div>
     <div class="panel-body">
         Kiểm tra một key có tồn tại
     </div>

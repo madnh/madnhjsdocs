@@ -68,26 +68,26 @@ Thêm item, tự động xác định kiểu dữ liệu
 ```js
 var key = items.add('a');
 
-console.log(key); //content_string_0
-items.add(true); //content_boolean_0
-items.add([1,2,true, {a:'A', c:'C'}]); //content_array_0
+console.log(key); //content_string_1
+items.add(true); //content_boolean_1
+items.add([1,2,true, {a:'A', c:'C'}]); //content_Array_1
 ```
 
 Thêm item, meta info, tự động xác định kiểu dữ liệu
 ```js
-items.add('a', {id: 123}); //content_string_1
-items.add(true, {name: 'yahoo'}); //content_boolean_1
-items.add([1,2,true, {a:'A', c:'C'}], {expire: 1735693261}); //content_array_1
+items.add('a', {id: 123}); //content_string_2
+items.add(true, {name: 'yahoo'}); //content_boolean_2
+items.add([1,2,true, {a:'A', c:'C'}], {expire: 1735693261}); //content_Array_2
 ```
 
 Thêm item, meta info, kiểu dữ liệu tùy chọn
 ```js
-items.add('a', {id: 123}, 'yahoo'); //content_yahoo_0
+items.add('a', {id: 123}, 'yahoo'); //content_yahoo_1
 ```
 
 Thêm item nếu chưa có, nếu có trả về key của item đầu tiên (unique)
 ```js
-items.addUnique('a'); //content_string_0
+items.addUnique('a'); //content_string_1
 items.addUnique('b'); //content_string_2
 ```
 
@@ -101,8 +101,8 @@ items.hasType('foo'); //false
 
 Tồn tại key?
 ```js
-items.hasKey('content_string_0'); //true
-items.hasKey('content_foo_1'); //false
+items.has('content_string_0'); //true
+items.has('content_foo_1'); //false
 ```
 
 Tồn tại item?
@@ -126,7 +126,7 @@ items.getContent('content_string_999', 'ohhoho'); //ohhoho
 
 Lấy tất cả item của một kiểu dữ liệu
 ```js
-items.getType('string');{content_string_0: {....}, content_string_1: {....}, ....}
+items.getType('string'); //{content_string_0: {....}, content_string_1: {....}, ....}
 ```
 
 ### Cập nhật
