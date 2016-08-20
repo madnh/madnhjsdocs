@@ -988,6 +988,21 @@
     </ul>
 </div>
 <div class="panel panel-info">
+    <div class="panel-heading"><strong>keys</strong></div>
+    <div class="panel-body">
+        Trả về object chứa các content type (object key) và content keys (object value - array)
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h4>Parameters</h4>
+        </li>
+        <li class="list-group-item">
+            <h4>Returns</h4>
+            object
+        </li>
+    </ul>
+</div>
+<div class="panel panel-info">
     <div class="panel-heading"><strong>status</strong></div>
     <div class="panel-body">
         Tình trạng của instance
@@ -996,17 +1011,17 @@
         <li class="list-group-item">
             <h4>Returns</h4>
             Object với cấu trúc như sau:
-                                <dl class="dl-horizontal">
-                                    <dt>using</dt>
-                                    <dd>Các key đang được sử dụng</dd>
-                                    <dt>types</dt>
-                                    <dd>Object với cấu trúc:
-                                        <ul>
-                                            <li>field key: string, kiểu dữ liệu</li>
-                                            <li>field value: string[], mảng các key của kiểu dữ liệu</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
+                <dl class="dl-horizontal">
+                    <dt>using</dt>
+                    <dd>Các key đang được sử dụng</dd>
+                    <dt>types</dt>
+                    <dd>Object với cấu trúc:
+                        <ul>
+                            <li>field key: string, kiểu dữ liệu</li>
+                            <li>field value: string[], mảng các key của kiểu dữ liệu</li>
+                        </ul>
+                    </dd>
+                </dl>
         </li>
     </ul>
 </div>
