@@ -119,6 +119,43 @@ console.log('callback 1');
     </ul>
 </div>
 <div class="panel panel-info">
+    <div class="panel-heading"><strong>has</strong></div>
+    <div class="panel-body">
+        Kiểm tra một key có tồn tại không?
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h4>Parameters</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Kiểu dữ liệu</th>
+                    <th>Tham số tùy chọn và giá trị mặc định</th>
+                    <th>Mô tả</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>key</code></td>
+                    <td>string</td>
+                    <td></td>
+                    <td>Key cần kiểm tra</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li class="list-group-item">
+            <h4>Returns</h4>
+            <dl class="dl-horizontal">
+                <dt>boolean</dt>
+                <dd></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="panel panel-info">
     <div class="panel-heading"><strong>hasPriority</strong></div>
     <div class="panel-body">
         Kiểm tra một priority number có tồn tại không
@@ -164,7 +201,7 @@ p.hasPriority(_.M.PRIORITY_LEVEL_4); //false</code></pre>
     </ul>
 </div>
 <div class="panel panel-info">
-    <div class="panel-heading"><strong>removeKey</strong></div>
+    <div class="panel-heading"><strong>remove</strong></div>
     <div class="panel-body">
         Xóa key
     </div>
@@ -198,7 +235,7 @@ p.hasPriority(_.M.PRIORITY_LEVEL_4); //false</code></pre>
         </li>
         <li class="list-group-item">
             <h4>Example</h4>
-            <pre><code class="javascript">callbacks.removeKey('content_priority_0'); //["content_priority_0"]</code></pre>
+            <pre><code class="javascript">callbacks.remove('content_priority_0'); //["content_priority_0"]</code></pre>
         </li>
     </ul>
 </div>
@@ -327,7 +364,11 @@ p.getContents();
         </li>
         <li class="list-group-item">
             <h4>Examples</h4>
-<pre><code class="javascript">p.status(); //{priorities: 2, contents: 2}</code></pre>
+<pre><code class="javascript">var p = new _.M.Priority();
+p.addContent('A', 1);
+p.addContent('B', 1);
+p.addContent('A', 2);
+p.status(); //{priorities: 2, contents: 3}</code></pre>
         </li>
     </ul>
 </div>
