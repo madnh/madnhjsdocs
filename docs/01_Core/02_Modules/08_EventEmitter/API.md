@@ -334,30 +334,6 @@
                 <strong>Chú ý</strong> Các <code>_.M.EventEmitter</code> instance đang theo dõi sẽ được thông báo về event
                 (nếu không phải private event) sau khi các listener của từng event được thực thi (bao gồm cả event <code>event_emitted</code>).
             </div>
-            <h5>Notice</h5>
-            <p>
-                Khi nhận được thông báo về một sự kiện, nếu sự kiện đó có trong list của property <code>_event_mimics</code> thì sẽ được thực thi như là một event của instance
-            </p>
-            <p>Một <code>_.M.EventEmitter</code> instance khi nhận được thông báo từ một instance mà nó đang theo dõi (<strong>không</strong> phải một mimic event) sẽ phát sinh các sự kiện sau:</p>
-            <ul>
-                <li><code>&lt;ID object thông báo&gt;.&lt;tên event&gt;</code></li>
-                <li><code>&lt;type_prefix của object thông báo&gt;.&lt;tên event&gt;</code></li>
-                <li><code>noticed.&lt;ID object thông báo&gt;.&lt;tên event&gt;</code></li>
-                <li><code>noticed.&lt;ID object thông báo&gt;</code></li>
-                <li><code>noticed.&lt;type_prefix của obejct thông báo&gt;.&lt;tên event&gt;</code></li>
-                <li><code>noticed.&lt;type_prefix của object thông báo&gt;</code></li>
-                <li><code>noticed</code></li>
-            </ul>
-            <p>Các event trên, mỗi event sẽ có data là một object có cấu trúc như sau</p>
-            <dl class="dl-horizontal">
-                <dt>id</dt><dd>ID object thông báo</dd>
-                <dt>type</dt><dd><code>type_prefix</code> của object thông báo</dd>
-                <dt>event</dt><dd>Tên event</dd>
-                <dt>data</dt><dd>Event data</dd>
-            </dl>
-            <div class="alert alert-info">
-                <strong>Chú ý!</strong> Mỗi event khi được phát sinh và notice các followers sẽ phát sinh một event khác có tên <code><strong>&lt;tên event&gt;</strong>_complete</code>
-            </div>
         </li>
         <li class="list-group-item">
             <h4>Examples</h4>
